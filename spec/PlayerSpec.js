@@ -27,8 +27,8 @@ describe("Player", function() {
 
     it("should indicate that the song is currently paused", function() {
       expect(player.isPlaying).toBeFalsy();
-
-      // demonstrates use of 'not' with a custom matcher
+      // `expect` denotes the value we would expect the feature to return
+      //  - below demonstrates use of 'not' with a custom matcher
       expect(player).not.toBePlaying(song);
     });
 
@@ -49,7 +49,7 @@ describe("Player", function() {
     expect(song.persistFavoriteStatus).toHaveBeenCalledWith(true);
   });
 
-  //demonstrates use of expected exceptions
+  //demonstrates use of expected exceptions - for when an error is thrown
   describe("#resume", function() {
     it("should throw an exception if song is already playing", function() {
       player.play(song);
