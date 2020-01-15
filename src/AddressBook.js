@@ -1,5 +1,18 @@
 function AddressBook () {
   this.contacts = [];
+  this.initialComplete = false;
+}
+
+//add a contact
+AddressBook.prototype.getInitialContacts = function (callBack) {
+  let self = this;
+
+  setTimeout(function () {
+    self.initialComplete = true;
+    if (callBack) {
+      return callBack();
+    }
+  }, 3);
 }
 //add a contact
 AddressBook.prototype.addContact = function (contact) {
