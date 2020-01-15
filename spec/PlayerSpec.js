@@ -1,3 +1,5 @@
+// `describe` is used to identify a suite of tests ("Player"), which is simply a group of related specs.
+// - an organizational too that is used to add a level of indentation.
 describe("Player", function() {
   var player;
   var song;
