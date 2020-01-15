@@ -6,7 +6,8 @@ describe("Player", function() {
     player = new Player();
     song = new Song();
   });
-
+  // `it` is just a container for a test, or 'specification' (spec)
+  // a spec is used to identify a feature we are testing
   it("should be able to play a Song", function() {
     player.play(song);
     expect(player.currentlyPlayingSong).toEqual(song);
