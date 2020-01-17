@@ -26,3 +26,8 @@ AddressBook.prototype.getContact = function (index) {
 AddressBook.prototype.deleteContact = function (index) {
   return this.contacts.splice(index, 1);
 }
+
+// get all contacts
+AddressBook.prototype.getAllContacts = function () {
+  return this.contacts;
+}

@@ -22,6 +22,16 @@ describe('Address Book', function () {
       expect(addressBook.getContact(0)).not.toBeDefined();
     });
 
+    it('should be able to return all contacts', function () {
+
+      //add a contact to the book.
+      addressBook.addContact(thisContact);
+      addressBook.addContact(thisContact);
+      addressBook.addContact(thisContact);
+
+      expect(addressBook.getAllContacts().length).toBe(3);
+    });
+
 });
 // an example of Asyncronous API call spec suite
 describe('Asyncronous Address Book', function () {
